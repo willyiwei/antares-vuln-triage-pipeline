@@ -1,0 +1,21 @@
+antares:
+  base_url: "https://api.cisco.com/antares/v1"
+  api_key: ""  # Set ANTARES_API_KEY env var
+  timeout_seconds: 30
+  max_retries: 3
+  rate_limit_per_minute: 60
+
+scan_targets: []
+output_dir: "./reports"
+
+governance:
+  auto_accept_severities: ["low", "info"]
+  auto_reject_severities: []
+  confidence_threshold_auto_accept: 0.85
+  confidence_threshold_auto_reject: 0.3
+  require_human_review_for_cve: true
+  max_cvss_for_auto_accept: 5.0
+
+dashboard:
+  host: "127.0.0.1"
+  port: 8181
